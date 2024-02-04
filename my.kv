@@ -1,0 +1,137 @@
+BoxLayoutMain:
+
+<BoxLayoutMain>:
+    orientation: "vertical"
+    canvas:
+        Color:
+            rgb: 1, 1, 1
+        Rectangle:
+            source: 'data/images/background.jpg'
+            size: self.size
+
+    BoxLayout:
+        id: container  # Add an ID to the BoxLayout containing buttons
+        size_hint: 1, 0.62
+        OverlayLayout:
+            size_hint: 1, 1
+
+            CustomImage:
+                id: custom_image  # Assign an ID to the CustomImage widget
+
+            BoxLayout:
+                CustomExitButton:
+
+    BoxLayout:
+        size_hint: 1, 0.38
+        ScrollView:
+            id: scroll_view  # Add an ID to refer to the ScrollView
+            on_scroll_y: root.update_debug_info()
+            size_hint: 1, 1
+            BoxLayout:
+                id: container
+                orientation: "vertical"
+                spacing: "2dp"
+                size_hint_y: None
+                height: self.minimum_height
+
+                CustomSiteButton:
+                    text: "Airds Point"
+                CustomSiteButton:
+                    text: "An Camus"
+                CustomSiteButton:
+                    text: "Ardintoul"
+                CustomSiteButton:
+                    text: "Ardmair"
+                CustomSiteButton:
+                    text: "Ardnish"
+                CustomSiteButton:
+                    text: "Ardessey"
+                CustomSiteButton:
+                    text: "BDNC"
+                CustomSiteButton:
+                    text: "Cairidth"
+                CustomSiteButton:
+                    text: "Carradale"
+                CustomSiteButton:
+                    text: "Colonsay"
+                CustomSiteButton:
+                    text: "Duich"
+                CustomSiteButton:
+                    text: "Gorsten"
+                CustomSiteButton:
+                    text: "Greshornish"
+                CustomSiteButton:
+                    text: "Greanem"
+                CustomSiteButton:
+                    text: "Groatay"
+                CustomSiteButton:
+                    text: "Grey Horse Channel"
+                CustomSiteButton:
+                    text: "Hellisay"
+                CustomSiteButton:
+                    text: "Invasion Bay"
+                CustomSiteButton:
+                    text: "Inverawe"
+                CustomSiteButton:
+                    text: "Kingairloch"
+                CustomSiteButton:
+                    text: "Laga Bay"
+                CustomSiteButton:
+                    text: "Leven"
+                CustomSiteButton:
+                    text: "Linhe"
+                CustomSiteButton:
+                    text: "Loch Alsh"
+                CustomSiteButton:
+                    text: "Loch Hourn"
+                CustomSiteButton:
+                    text: "Loch Shell"
+                CustomSiteButton:
+                    text: "Loch Skipport"
+                CustomSiteButton:
+                    text: "MacLeans Nose"
+                CustomSiteButton:
+                    text: "Marulaig Bay"
+                CustomSiteButton:
+                    text: "Moal Ban"
+                CustomSiteButton:
+                    text: "Muck"
+                CustomSiteButton:
+                    text: "NorthShore"
+                CustomSiteButton:
+                    text: "PNG"
+                CustomSiteButton:
+                    text: "PNC"
+                CustomSiteButton:
+                    text: "Port na Mine"
+                CustomSiteButton:
+                    text: "Portnalong"
+                CustomSiteButton:
+                    text: "Rum"
+                CustomSiteButton:
+                    text: "Sailean Ruadh"
+                CustomSiteButton:
+                    text: "Sconser Quarry"
+                CustomSiteButton:
+                    text: "Scalpay"
+                CustomSiteButton:
+                    text: "Seaforth"
+                CustomSiteButton:
+                    text: "Stulaigh"
+                CustomSiteButton:
+                    text: "Sunart"
+                CustomSiteButton:
+                    text: "SW Shuna"
+                CustomSiteButton:
+                    text: "Tabhaigh"
+                CustomSiteButton:
+                    text: "Torridon"
+                CustomSiteButton:
+                    text: "Trilleachan Mor"
+                CustomSiteButton:
+                    text: "WesterRoss"
+                CustomSiteButton:
+                    text: "West Loch Tarbert"
+
+<CustomSiteButton>:
+    on_release: root.show_popup(root.text)
